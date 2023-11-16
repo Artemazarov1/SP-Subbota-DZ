@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() 
+{
+    setlocale(0, "");
+    int n;
+    cout << "введите число n: ";
+    cin >> n;
+
+    cout << "числа, которые можно представить в виде суммы квадратов 2 натуральных чисел : ";
+    for (int i = 1; i * i <= n; ++i) 
+    {
+        for (int j = i; i * i + j * j <= n; ++j) 
+        {
+            cout << i * i + j * j << " ";
+        }
+    }
+
+    return 0;
+}
